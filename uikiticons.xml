@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="editors-xtd" method="upgrade">
+    <name>plg_editors-xtd_uikiticons</name>
+    <author>Fedor Godunov</author>
+    <creationDate>2026-11</creationDate>
+    <version>1.0.1</version>
+    <description>Кнопка вставки классов иконок UIkit 3 для списков и заголовков</description>
+    <namespace path="src">Joomla\Plugin\EditorsXtd\UikitIcons</namespace>
+    <files>
+        <folder plugin="uikiticons">services</folder>
+        <folder>src</folder>
+    </files>
+    <media destination="plg_editors-xtd_uikiticons" folder="media">
+        <folder>js</folder>
+    </media>
+		
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="allowed_icons"
+                    type="textarea"
+                    label="Разрешенные иконки (белый список)"
+                    description="Укажите названия иконок UIkit 3 через запятую. В редакторе будут доступны только они."
+                    default="check, square-check, plus, chevron-right, arrow-right, star, heart, bolt, info, warning, close, location"
+                    rows="3"
+                />
+            </fieldset>
+        </fields>
+    </config>
+		
+</extension>
+
